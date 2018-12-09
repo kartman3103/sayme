@@ -1,6 +1,7 @@
 package org.sayme
 
 import io.ktor.application.*
+import io.ktor.auth.Authentication
 import io.ktor.response.*
 import io.ktor.request.*
 import io.ktor.routing.*
@@ -16,6 +17,10 @@ fun Application.module(testing: Boolean = false) {
     install(ContentNegotiation) {
         gson {
         }
+    }
+
+    install(Authentication) {
+
     }
 
     routing {
